@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1/plugin/relativeTime.js"></script>
+    <script>
+      dayjs.extend(window.dayjs_plugin_relativeTime)
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1/locale/pt-br.js"></script>
+    <script>
+      dayjs.locale('pt-br')
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&amp;display=swap" rel="stylesheet">
+    <script type="text/javascript" src="./index.js" defer=""></script>
+    <link rel="stylesheet" href="./index.css">
+  </head>
+
+
+  <body>
+    <div class="container">
+      <header>
+        <svg width="626" height="48" viewBox="0 0 626 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect y="8" width="32" height="32" rx="7.11111" fill="#F48F56"></rect>
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M12.0682 23.0585V20.7587L5.71097 23.1201H5.69678V25.4821H5.71097L12.0682 27.8463V25.5416L8.80823 24.2976L12.0682 23.0585Z" fill="#00292E"></path>
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M19.6328 26.0618L22.89 24.8249L19.6328 23.588V21.2882L25.9829 23.6524H25.9998V26.0165H25.9829L19.6328 28.3687V26.0618ZM16.9057 18.031L13.1708 30.0167H15.387L19.1219 18.031H16.9057Z" fill="#00292E"></path>
+        </svg>
+      </header>
+
+      <form onsubmit="adicionarParticipante(event)">
+        <fieldset>
+          <legend>Inscrição</legend>
+
+          <div>
+            <div class="input-wrapper">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_4003_2796)">
+                  <path d="M12 13.3333C12 12.2724 11.5786 11.255 10.8284 10.5048C10.0783 9.75468 9.06087 9.33325 8 9.33325C6.93913 9.33325 5.92172 9.75468 5.17157 10.5048C4.42143 11.255 4 12.2724 4 13.3333" stroke="#9FF9CC" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"></path>
+                  <path d="M8.00004 9.33333C9.4728 9.33333 10.6667 8.13943 10.6667 6.66667C10.6667 5.19391 9.4728 4 8.00004 4C6.52728 4 5.33337 5.19391 5.33337 6.66667C5.33337 8.13943 6.52728 9.33333 8.00004 9.33333Z" stroke="#9FF9CC" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"></path>
+                  <path d="M8.00004 14.6666C11.6819 14.6666 14.6667 11.6818 14.6667 7.99992C14.6667 4.31802 11.6819 1.33325 8.00004 1.33325C4.31814 1.33325 1.33337 4.31802 1.33337 7.99992C1.33337 11.6818 4.31814 14.6666 8.00004 14.6666Z" stroke="#9FF9CC" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"></path>
+                </g>
+                <defs>
+                  <clipPath id="clip0_4003_2796">
+                    <rect width="16" height="16" fill="white"></rect>
+                  </clipPath>
+                </defs>
+              </svg>
+
+              <input type="text" placeholder="Nome Completo" name="nome" required="">
+            </div>
+            <div class="input-wrapper">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_4003_2802)">
+                  <path d="M8.00004 10.6666C9.4728 10.6666 10.6667 9.47268 10.6667 7.99992C10.6667 6.52716 9.4728 5.33325 8.00004 5.33325C6.52728 5.33325 5.33337 6.52716 5.33337 7.99992C5.33337 9.47268 6.52728 10.6666 8.00004 10.6666Z" stroke="#9FF9CC" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"></path>
+                  <path d="M10.6667 5.33326V8.66659C10.6667 9.19702 10.8774 9.70573 11.2525 10.0808C11.6276 10.4559 12.1363 10.6666 12.6667 10.6666C13.1971 10.6666 13.7059 10.4559 14.0809 10.0808C14.456 9.70573 14.6667 9.19702 14.6667 8.66659V7.99992C14.6667 6.49813 14.1596 5.04032 13.2277 3.8627C12.2957 2.68508 10.9934 1.85664 9.53173 1.5116C8.07011 1.16656 6.5348 1.32513 5.17456 1.96163C3.81431 2.59812 2.70882 3.67525 2.0372 5.0185C1.36558 6.36175 1.16717 7.89242 1.47412 9.36251C1.78107 10.8326 2.57539 12.156 3.7284 13.1183C4.88141 14.0805 6.32554 14.6253 7.82683 14.6643C9.32812 14.7034 10.7986 14.2343 12 13.3333" stroke="#9FF9CC" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"></path>
+                </g>
+                <defs>
+                  <clipPath id="clip0_4003_2802">
+                    <rect width="16" height="16" fill="white"></rect>
+                  </clipPath>
+                </defs>
+              </svg>
+
+              <input type="email" placeholder="email@email.com" name="email" required="">
+            </div>
+            <button>
+              REALIZAR INSCRIÇÃO
+            </button>
+          </div>
+        </fieldset>
+      </form>
+      <section class="lista-participantes">
+        <h2>Participantes</h2>
+        <div>
+          <table width="100%">
+            <thead style="text-align: left">
+              <tr>
+                <th>Participante</th>
+                <th>Data de inscrição</th>
+                <th>Data do check-in</th>
+              </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </div>
+  </body>
+
+</html>
